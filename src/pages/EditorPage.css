@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mainWrap {
+    height: screen;
+    background: #0f172a;
+    display: flex;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    color: #e2e8f0;
+    overflow: hidden;
+    min-width: auto;  
+}
+
+/* Sidebar */
+.aside {
+    width: 280px;
+    min-width: 280px;
+    background: #1e293b;
+    border-right: 1px solid #334155;
+    display: flex;
+    flex-direction: column;
+    height: screen;
+    overflow-y: auto;
+}
+
+.asideInner {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.logoImage {
+    width: fit-content;
+    height: 40px;
+}
+
+/* Connected Users */
+.aside h3 {
+    color: #f1f5f9;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #334155;
+}
+
+.clientsList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.clientsList::-webkit-scrollbar {
+    width: 4px;
+}
+
+.clientsList::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.clientsList::-webkit-scrollbar-thumb {
+    background: #475569;
+    border-radius: 2px;
+}
+
+/* Form Controls */
+.aside label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: #cbd5e1;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.seLang {
+    background: #334155;
+    border: 1px solid #475569;
+    border-radius: 6px;
+    padding: 0.75rem;
+    color: #e2e8f0;
+    font-size: 0.875rem;
+    transition: border-color 0.2s ease;
+    cursor: pointer;
+    width: 100%;
+}
+
+.seLang:focus {
+    outline: none;
+    border-color: #3b82f6;
+}
+
+.seLang option {
+    background: #1e293b;
+    color: #e2e8f0;
+}
+
+/* Buttons */
+.btn {
+    width: 100%;
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    border: none;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 0.5rem;
+}
+
+.copyBtn {
+    background: #3b82f6;
+    color: white;
+}
+
+.copyBtn:hover {
+    background: #2563eb;
+}
+
+.leaveBtn {
+    background: #ef4444;
+    color: white;
+}
+
+.leaveBtn:hover {
+    background: #dc2626;
+}
+
+/* Editor Section */
+.editorWrap {
+    flex: 1;
+    background: #0f172a;
+    display: flex;
+    flex-direction: column;
+    height: screen;
+    overflow: hidden;
+}
+
+/* Mobile Warning */
+@media (max-width: 700px) {
+    .mainWrap::before {
+        content: "This application is designed for desktop and tablet use only. Please use a device with a minimum width of 768 px."; 
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(15, 23, 42, 0.95);
+        color: #e2e8f0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 2rem;
+        font-size: 1.2rem;
+        z-index: 1000;
+    }
+}

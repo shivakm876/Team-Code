@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: realtime-code-editor
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SERVER_PORT
+        value: 10000
+    healthCheckPath: /
+    autoDeploy: true 
